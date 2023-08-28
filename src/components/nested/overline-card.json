@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_nested_overline_cards",
+  "info": {
+    "displayName": "OverlineCard"
+  },
+  "options": {},
+  "attributes": {
+    "overline": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "text": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

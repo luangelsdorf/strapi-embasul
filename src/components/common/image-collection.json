@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_common_image_collections",
+  "info": {
+    "displayName": "ImageCollection",
+    "icon": "images",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}

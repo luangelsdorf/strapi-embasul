@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_nested_icon_card_shorts",
+  "info": {
+    "displayName": "IconCardShort"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "text": {
+      "type": "text",
+      "required": true
+    }
+  }
+}
