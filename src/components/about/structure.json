@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_about_structures",
+  "info": {
+    "displayName": "Structure"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
+    }
+  }
+}

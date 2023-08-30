@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_innovation_digital_printings",
+  "info": {
+    "displayName": "DigitalPrinting"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

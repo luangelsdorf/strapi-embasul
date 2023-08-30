@@ -1,0 +1,45 @@
+{
+  "kind": "singleType",
+  "collectionName": "sustainabilities",
+  "info": {
+    "singularName": "sustainability",
+    "pluralName": "sustainabilities",
+    "displayName": "Sustentabilidade"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fscCertificate": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sustainability.fsc-certificate",
+      "required": true
+    },
+    "seal": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sustainability.sustainable-origin-seal",
+      "required": true
+    },
+    "pegada": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sustainability.pegada-neutra-partnership",
+      "required": true
+    },
+    "cts": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sustainability.cts-partnership",
+      "required": true
+    },
+    "policy": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sustainability.sustainability-policy",
+      "required": true
+    }
+  }
+}

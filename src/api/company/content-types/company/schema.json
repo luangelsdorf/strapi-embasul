@@ -1,0 +1,40 @@
+{
+  "kind": "singleType",
+  "collectionName": "companies",
+  "info": {
+    "singularName": "company",
+    "pluralName": "companies",
+    "displayName": "Empresa",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "history": {
+      "type": "component",
+      "repeatable": false,
+      "component": "about.our-history",
+      "required": true
+    },
+    "principles": {
+      "type": "component",
+      "repeatable": false,
+      "component": "about.principles",
+      "required": true
+    },
+    "structure": {
+      "type": "component",
+      "repeatable": false,
+      "component": "about.structure",
+      "required": true
+    },
+    "sectors": {
+      "type": "component",
+      "repeatable": false,
+      "component": "about.business-sectors",
+      "required": true
+    }
+  }
+}

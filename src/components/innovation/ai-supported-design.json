@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_innovation_ai_supported_designs",
+  "info": {
+    "displayName": "AISupportedDesign"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    }
+  }
+}

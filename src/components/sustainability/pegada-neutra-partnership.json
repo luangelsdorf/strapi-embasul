@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sustainability_pegada_neutra_partnership",
+  "info": {
+    "displayName": "PegadaNeutraPartnership",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light"
+      },
+      "required": true,
+      "customField": "plugin::ckeditor.CKEditor"
+    }
+  }
+}

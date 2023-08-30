@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_products_flex_and_digital_printings",
+  "info": {
+    "displayName": "Flexo&DigitalPrinting",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light"
+      },
+      "required": true,
+      "customField": "plugin::ckeditor.CKEditor"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_about_principles",
+  "info": {
+    "displayName": "Principles"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "text",
+      "required": true
+    },
+    "guidelines": {
+      "type": "component",
+      "repeatable": true,
+      "component": "nested.icon-card",
+      "max": 3,
+      "min": 3
+    }
+  }
+}

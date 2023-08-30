@@ -1,0 +1,33 @@
+{
+  "kind": "singleType",
+  "collectionName": "innovations",
+  "info": {
+    "singularName": "innovation",
+    "pluralName": "innovations",
+    "displayName": "Inovação"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "digitalPrinting": {
+      "type": "component",
+      "repeatable": false,
+      "component": "innovation.digital-printing",
+      "required": true
+    },
+    "aiDesign": {
+      "type": "component",
+      "repeatable": false,
+      "component": "innovation.ai-supported-design",
+      "required": true
+    },
+    "isoProcesses": {
+      "type": "component",
+      "repeatable": false,
+      "component": "innovation.iso-9001-processes",
+      "required": true
+    }
+  }
+}

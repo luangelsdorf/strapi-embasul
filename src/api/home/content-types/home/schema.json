@@ -24,6 +24,60 @@
       "component": "nested.icon-card-short",
       "required": true
     },
+    "flexographicPrinting": {
+      "type": "component",
+      "repeatable": false,
+      "component": "nested.icon-card-short",
+      "required": true
+    },
+    "digitalPrinting": {
+      "type": "component",
+      "repeatable": false,
+      "component": "nested.icon-card-short",
+      "required": true
+    },
+    "ai": {
+      "type": "component",
+      "repeatable": false,
+      "component": "nested.icon-card-short",
+      "required": true
+    },
+    "technology": {
+      "type": "component",
+      "repeatable": false,
+      "component": "nested.icon-card-short",
+      "required": true
+    },
+    "productCarousel": {
+      "type": "component",
+      "repeatable": false,
+      "component": "nested.icon-card-short",
+      "required": true
+    },
+    "certifications": {
+      "type": "component",
+      "repeatable": false,
+      "component": "nested.icon-card-short",
+      "required": true
+    },
+    "sustainability": {
+      "type": "component",
+      "repeatable": false,
+      "component": "nested.icon-card-short",
+      "required": true
+    },
+    "esg": {
+      "type": "component",
+      "repeatable": false,
+      "component": "nested.icon-card-short",
+      "required": true
+    },
+    "people": {
+      "type": "component",
+      "repeatable": false,
+      "component": "nested.icon-card-short",
+      "required": true
+    },
     "customLots": {
       "type": "component",
       "repeatable": false,

@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_people_people",
+  "info": {
+    "displayName": "People"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light"
+      },
+      "required": true,
+      "customField": "plugin::ckeditor.CKEditor"
+    }
+  }
+}

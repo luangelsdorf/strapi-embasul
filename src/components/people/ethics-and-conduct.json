@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_people_ethics_and_conducts",
+  "info": {
+    "displayName": "Ethics&Conduct"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light"
+      },
+      "required": true,
+      "customField": "plugin::ckeditor.CKEditor"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_people_ethics_channels",
+  "info": {
+    "displayName": "EthicsChannel"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light"
+      },
+      "required": true,
+      "customField": "plugin::ckeditor.CKEditor"
+    }
+  }
+}

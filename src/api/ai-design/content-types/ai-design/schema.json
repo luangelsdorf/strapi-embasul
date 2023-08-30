@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "ai_designs",
+  "info": {
+    "singularName": "ai-design",
+    "pluralName": "ai-designs",
+    "displayName": "Produtos - Design Suportado por AI"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "text": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light"
+      },
+      "required": true,
+      "customField": "plugin::ckeditor.CKEditor"
+    }
+  }
+}

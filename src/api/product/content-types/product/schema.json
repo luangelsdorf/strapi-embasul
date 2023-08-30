@@ -1,0 +1,45 @@
+{
+  "kind": "singleType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Produtos"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "flexoDigitalPrinting": {
+      "type": "component",
+      "repeatable": false,
+      "component": "products.flex-and-digital-printing",
+      "required": true
+    },
+    "cutomMaterials": {
+      "type": "component",
+      "repeatable": false,
+      "component": "products.custom-materials",
+      "required": true
+    },
+    "techSupport": {
+      "type": "component",
+      "repeatable": false,
+      "component": "products.tech-support",
+      "required": true
+    },
+    "packagingDesign": {
+      "type": "component",
+      "repeatable": false,
+      "component": "products.packaging-design",
+      "required": true
+    },
+    "projects": {
+      "type": "component",
+      "repeatable": false,
+      "component": "products.projects",
+      "required": true
+    }
+  }
+}

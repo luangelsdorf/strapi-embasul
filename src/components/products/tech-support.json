@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_products_tech_support",
+  "info": {
+    "displayName": "TechSupport",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light"
+      },
+      "required": true,
+      "customField": "plugin::ckeditor.CKEditor"
+    }
+  }
+}

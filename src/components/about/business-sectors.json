@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_about_business_sectors",
+  "info": {
+    "displayName": "BusinessSectors"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "text"
+    }
+  }
+}

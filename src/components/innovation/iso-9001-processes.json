@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_innovation_iso_9001_processes",
+  "info": {
+    "displayName": "ISO9001Processes"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light"
+      },
+      "required": true,
+      "customField": "plugin::ckeditor.CKEditor"
+    }
+  }
+}

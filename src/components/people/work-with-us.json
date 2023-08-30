@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_people_work_withuses",
+  "info": {
+    "displayName": "WorkWithUs"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light"
+      },
+      "required": true,
+      "customField": "plugin::ckeditor.CKEditor"
+    }
+  }
+}

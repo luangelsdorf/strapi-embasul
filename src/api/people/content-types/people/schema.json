@@ -1,0 +1,39 @@
+{
+  "kind": "singleType",
+  "collectionName": "peoples",
+  "info": {
+    "singularName": "people",
+    "pluralName": "peoples",
+    "displayName": "Pessoas"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "people": {
+      "type": "component",
+      "repeatable": false,
+      "component": "people.people",
+      "required": true
+    },
+    "ethicsConduct": {
+      "type": "component",
+      "repeatable": false,
+      "component": "people.ethics-and-conduct",
+      "required": true
+    },
+    "ethicsChannel": {
+      "type": "component",
+      "repeatable": false,
+      "component": "people.ethics-channel",
+      "required": true
+    },
+    "workWithUs": {
+      "type": "component",
+      "repeatable": false,
+      "component": "people.work-with-us",
+      "required": true
+    }
+  }
+}

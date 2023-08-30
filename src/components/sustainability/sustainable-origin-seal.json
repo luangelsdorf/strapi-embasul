@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sustainability_sustainable_origin_seal",
+  "info": {
+    "displayName": "SustainableOriginSeal",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light"
+      },
+      "required": true,
+      "customField": "plugin::ckeditor.CKEditor"
+    }
+  }
+}

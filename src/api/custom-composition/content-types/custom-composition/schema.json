@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "custom_compositions",
+  "info": {
+    "singularName": "custom-composition",
+    "pluralName": "custom-compositions",
+    "displayName": "Produtos - Composições Customizadas"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "text": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light"
+      },
+      "required": true,
+      "customField": "plugin::ckeditor.CKEditor"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "packaging_designs",
+  "info": {
+    "singularName": "packaging-design",
+    "pluralName": "packaging-designs",
+    "displayName": "Produtos - Design de Embalagens"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "text": {
+      "type": "customField",
+      "options": {
+        "output": "HTML",
+        "preset": "light"
+      },
+      "required": true,
+      "customField": "plugin::ckeditor.CKEditor"
+    }
+  }
+}
