@@ -4,21 +4,36 @@
   "info": {
     "singularName": "digital-printing",
     "pluralName": "digital-printings",
-    "displayName": "Produtos - Impressão Digital"
+    "displayName": "Produtos - Impressão Digital",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
-    "text": {
-      "type": "customField",
-      "options": {
-        "output": "HTML",
-        "preset": "light"
-      },
-      "required": true,
-      "customField": "plugin::ckeditor.CKEditor"
+    "banner": {
+      "type": "component",
+      "repeatable": false,
+      "component": "products.banner-cta",
+      "required": true
+    },
+    "details": {
+      "type": "component",
+      "repeatable": false,
+      "component": "products.2-image-content",
+      "required": true
+    },
+    "benefits": {
+      "type": "component",
+      "repeatable": false,
+      "component": "products.mosaic"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.call-to-action",
+      "required": true
     }
   }
 }

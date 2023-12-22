@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_common_call_to_actions",
+  "info": {
+    "displayName": "CallToAction",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "text",
+      "required": true
+    },
+    "linkText": {
+      "type": "string",
+      "required": true
+    },
+    "linkUrl": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

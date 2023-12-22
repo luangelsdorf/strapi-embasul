@@ -4,21 +4,32 @@
   "info": {
     "singularName": "custom-composition",
     "pluralName": "custom-compositions",
-    "displayName": "Produtos - Composições Customizadas"
+    "displayName": "Produtos - Composições Customizadas",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
-    "text": {
-      "type": "customField",
-      "options": {
-        "output": "HTML",
-        "preset": "light"
-      },
-      "required": true,
-      "customField": "plugin::ckeditor.CKEditor"
+    "banner": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.title",
+      "required": true
+    },
+    "content": {
+      "displayName": "Content",
+      "type": "component",
+      "repeatable": false,
+      "component": "products.content",
+      "required": true
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.call-to-action",
+      "required": true
     }
   }
 }

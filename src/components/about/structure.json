@@ -1,17 +1,40 @@
 {
   "collectionName": "components_about_structures",
   "info": {
-    "displayName": "Structure"
+    "displayName": "Structure",
+    "description": ""
   },
   "options": {},
   "attributes": {
+    "headline": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.title",
+      "required": true
+    },
     "text": {
-      "type": "customField",
-      "options": {
-        "output": "HTML",
-        "preset": "light"
-      },
-      "customField": "plugin::ckeditor.CKEditor"
+      "type": "text",
+      "required": true
+    },
+    "statistics": {
+      "type": "component",
+      "repeatable": false,
+      "component": "about.statistics",
+      "required": true
+    },
+    "highlights": {
+      "type": "component",
+      "repeatable": true,
+      "component": "nested.statistics",
+      "required": true,
+      "max": 4,
+      "min": 4
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.call-to-action",
+      "required": true
     }
   }
 }

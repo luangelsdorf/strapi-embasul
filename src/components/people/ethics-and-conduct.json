@@ -1,18 +1,30 @@
 {
   "collectionName": "components_people_ethics_and_conducts",
   "info": {
-    "displayName": "Ethics&Conduct"
+    "displayName": "Ethics&Conduct",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "text": {
-      "type": "customField",
-      "options": {
-        "output": "HTML",
-        "preset": "light"
-      },
-      "required": true,
-      "customField": "plugin::ckeditor.CKEditor"
+    "headline": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.title",
+      "required": true
+    },
+    "ethicalManual": {
+      "type": "text",
+      "required": true
+    },
+    "downloadLink": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.link",
+      "required": true
+    },
+    "ethicalValues": {
+      "type": "text",
+      "required": true
     }
   }
 }

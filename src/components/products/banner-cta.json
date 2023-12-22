@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_products_banner_ctas",
+  "info": {
+    "displayName": "BannerCTA",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "text",
+      "required": true
+    },
+    "ctaTitle": {
+      "type": "string",
+      "required": true
+    },
+    "ctaText": {
+      "type": "text",
+      "required": true
+    },
+    "shortText": {
+      "type": "string",
+      "required": true
+    },
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.link",
+      "required": true
+    }
+  }
+}

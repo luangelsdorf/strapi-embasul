@@ -4,21 +4,19 @@
   "info": {
     "singularName": "project",
     "pluralName": "projects",
-    "displayName": "Produtos - Projetos Realizados"
+    "displayName": "Produtos - Projetos Realizados",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
-    "text": {
-      "type": "customField",
-      "options": {
-        "output": "HTML",
-        "preset": "light"
-      },
-      "required": true,
-      "customField": "plugin::ckeditor.CKEditor"
+    "headline": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.title",
+      "required": true
     }
   }
 }

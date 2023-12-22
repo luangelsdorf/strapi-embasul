@@ -1,18 +1,30 @@
 {
   "collectionName": "components_people_ethics_channels",
   "info": {
-    "displayName": "EthicsChannel"
+    "displayName": "EthicsChannel",
+    "description": ""
   },
   "options": {},
   "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
     "text": {
-      "type": "customField",
-      "options": {
-        "output": "HTML",
-        "preset": "light"
-      },
+      "type": "text",
+      "required": true
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "nested.link-card",
       "required": true,
-      "customField": "plugin::ckeditor.CKEditor"
+      "max": 3,
+      "min": 3
+    },
+    "note": {
+      "type": "text",
+      "required": true
     }
   }
 }

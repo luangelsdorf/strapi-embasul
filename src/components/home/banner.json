@@ -1,17 +1,18 @@
 {
   "collectionName": "components_home_banners",
   "info": {
-    "displayName": "Banner"
+    "displayName": "Banner",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "cover": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "title": {
       "type": "string",
@@ -20,6 +21,16 @@
     "text": {
       "type": "text",
       "required": true
+    },
+    "link1": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.link"
+    },
+    "link2": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.link"
     }
   }
 }

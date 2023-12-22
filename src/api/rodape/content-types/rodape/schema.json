@@ -1,0 +1,23 @@
+{
+  "kind": "singleType",
+  "collectionName": "rodapes",
+  "info": {
+    "singularName": "rodape",
+    "pluralName": "rodapes",
+    "displayName": "Rodapé"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

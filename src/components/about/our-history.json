@@ -6,13 +6,26 @@
   },
   "options": {},
   "attributes": {
-    "text": {
-      "type": "customField",
-      "options": {
-        "output": "HTML",
-        "preset": "light"
-      },
-      "customField": "plugin::ckeditor.CKEditor"
+    "headline": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.title",
+      "required": false
+    },
+    "timelineItems": {
+      "displayName": "TimelineItem",
+      "type": "component",
+      "repeatable": true,
+      "component": "nested.timeline-item",
+      "required": true,
+      "max": 8,
+      "min": 4
+    },
+    "future": {
+      "type": "component",
+      "repeatable": false,
+      "component": "nested.statistics",
+      "required": true
     }
   }
 }

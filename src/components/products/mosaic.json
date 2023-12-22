@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_products_mosaics",
+  "info": {
+    "displayName": "Mosaic"
+  },
+  "options": {},
+  "attributes": {
+    "headline": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.title"
+    },
+    "text": {
+      "type": "text",
+      "required": true
+    },
+    "image1": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "text2": {
+      "type": "text"
+    },
+    "image2": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

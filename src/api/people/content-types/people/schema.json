@@ -4,23 +4,18 @@
   "info": {
     "singularName": "people",
     "pluralName": "peoples",
-    "displayName": "Pessoas"
+    "displayName": "Pessoas",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
-    "people": {
+    "banner": {
       "type": "component",
       "repeatable": false,
-      "component": "people.people",
-      "required": true
-    },
-    "ethicsConduct": {
-      "type": "component",
-      "repeatable": false,
-      "component": "people.ethics-and-conduct",
+      "component": "products.banner-cta",
       "required": true
     },
     "ethicsChannel": {
@@ -29,11 +24,17 @@
       "component": "people.ethics-channel",
       "required": true
     },
-    "workWithUs": {
+    "ethicsAndConduct": {
       "type": "component",
       "repeatable": false,
-      "component": "people.work-with-us",
+      "component": "people.ethics-and-conduct",
       "required": true
+    },
+    "people": {
+      "type": "component",
+      "repeatable": false,
+      "required": true,
+      "component": "people.people"
     }
   }
 }

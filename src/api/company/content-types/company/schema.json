@@ -29,12 +29,6 @@
       "repeatable": false,
       "component": "about.structure",
       "required": true
-    },
-    "sectors": {
-      "type": "component",
-      "repeatable": false,
-      "component": "about.business-sectors",
-      "required": true
     }
   }
 }

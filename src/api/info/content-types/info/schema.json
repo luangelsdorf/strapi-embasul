@@ -4,7 +4,8 @@
   "info": {
     "singularName": "info",
     "pluralName": "infos",
-    "displayName": "Informações de Contato"
+    "displayName": "Informações de Contato",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -19,14 +20,12 @@
       "type": "component",
       "repeatable": true,
       "component": "common.link",
-      "required": true
+      "required": true,
+      "max": 3,
+      "min": 3
     },
-    "video": {
-      "allowedTypes": [
-        "videos"
-      ],
-      "type": "media",
-      "multiple": false,
+    "phone": {
+      "type": "string",
       "required": true
     }
   }

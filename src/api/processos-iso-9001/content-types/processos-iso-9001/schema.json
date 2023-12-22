@@ -1,0 +1,36 @@
+{
+  "kind": "singleType",
+  "collectionName": "processos_iso_9001s",
+  "info": {
+    "singularName": "processos-iso-9001",
+    "pluralName": "processos-iso-9001s",
+    "displayName": "Processos ISO9001",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "banner": {
+      "type": "component",
+      "repeatable": false,
+      "component": "nested.icon-card-title",
+      "required": true
+    },
+    "highlights": {
+      "type": "component",
+      "repeatable": true,
+      "component": "nested.statistics",
+      "required": true,
+      "min": 3,
+      "max": 6
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.call-to-action",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_products_contents",
+  "info": {
+    "displayName": "Content"
+  },
+  "options": {},
+  "attributes": {
+    "collage": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.image",
+      "required": true,
+      "max": 4,
+      "min": 4
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

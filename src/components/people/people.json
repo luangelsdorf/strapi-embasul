@@ -1,18 +1,24 @@
 {
   "collectionName": "components_people_people",
   "info": {
-    "displayName": "People"
+    "displayName": "People",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "text": {
-      "type": "customField",
-      "options": {
-        "output": "HTML",
-        "preset": "light"
-      },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "nested.link-card",
       "required": true,
-      "customField": "plugin::ckeditor.CKEditor"
+      "max": 3,
+      "min": 3
+    },
+    "details": {
+      "type": "component",
+      "repeatable": false,
+      "component": "nested.icon-card-title",
+      "required": true
     }
   }
 }

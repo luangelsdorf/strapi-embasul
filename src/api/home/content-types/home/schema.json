@@ -18,70 +18,30 @@
       "component": "home.banner",
       "required": true
     },
-    "fastDelivery": {
+    "cases": {
       "type": "component",
       "repeatable": false,
-      "component": "nested.icon-card-short",
+      "component": "home.cases",
       "required": true
     },
-    "flexographicPrinting": {
+    "serviceHighlights": {
       "type": "component",
-      "repeatable": false,
-      "component": "nested.icon-card-short",
-      "required": true
-    },
-    "digitalPrinting": {
-      "type": "component",
-      "repeatable": false,
-      "component": "nested.icon-card-short",
-      "required": true
-    },
-    "ai": {
-      "type": "component",
-      "repeatable": false,
-      "component": "nested.icon-card-short",
-      "required": true
-    },
-    "technology": {
-      "type": "component",
-      "repeatable": false,
-      "component": "nested.icon-card-short",
-      "required": true
-    },
-    "productCarousel": {
-      "type": "component",
-      "repeatable": false,
-      "component": "nested.icon-card-short",
-      "required": true
-    },
-    "certifications": {
-      "type": "component",
-      "repeatable": false,
-      "component": "nested.icon-card-short",
+      "repeatable": true,
+      "component": "home.service-highlight",
+      "max": 8,
+      "min": 4,
       "required": true
     },
     "sustainability": {
       "type": "component",
       "repeatable": false,
-      "component": "nested.icon-card-short",
+      "component": "home.sustainability",
       "required": true
     },
-    "esg": {
+    "certificates": {
       "type": "component",
       "repeatable": false,
-      "component": "nested.icon-card-short",
-      "required": true
-    },
-    "people": {
-      "type": "component",
-      "repeatable": false,
-      "component": "nested.icon-card-short",
-      "required": true
-    },
-    "customLots": {
-      "type": "component",
-      "repeatable": false,
-      "component": "nested.icon-card-short",
+      "component": "home.certificates",
       "required": true
     }
   }

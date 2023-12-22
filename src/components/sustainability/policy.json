@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_sustainability_policies",
+  "info": {
+    "displayName": "Policy"
+  },
+  "options": {},
+  "attributes": {
+    "headline": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.title",
+      "required": true
+    },
+    "text": {
+      "type": "text"
+    },
+    "cta": {
+      "type": "text",
+      "required": true
+    },
+    "downloadLink": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.link",
+      "required": true
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "nested.icon-card-short",
+      "required": true,
+      "max": 6,
+      "min": 6
+    }
+  }
+}

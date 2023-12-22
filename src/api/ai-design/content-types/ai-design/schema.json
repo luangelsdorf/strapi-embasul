@@ -4,21 +4,35 @@
   "info": {
     "singularName": "ai-design",
     "pluralName": "ai-designs",
-    "displayName": "Produtos - Design Suportado por AI"
+    "displayName": "Produtos - Design Suportado por AI",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
-    "text": {
-      "type": "customField",
-      "options": {
-        "output": "HTML",
-        "preset": "light"
-      },
-      "required": true,
-      "customField": "plugin::ckeditor.CKEditor"
+    "banner": {
+      "type": "component",
+      "repeatable": false,
+      "component": "nested.overline-card",
+      "required": true
+    },
+    "highlights": {
+      "type": "component",
+      "repeatable": true,
+      "component": "nested.statistics",
+      "max": 6,
+      "min": 3
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.call-to-action",
+      "required": true
+    },
+    "imageNote": {
+      "type": "string"
     }
   }
 }
