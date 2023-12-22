@@ -132,8 +132,8 @@ export interface CommonLink extends Schema.Component {
     description: '';
   };
   attributes: {
-    text: Attribute.String;
-    url: Attribute.String;
+    text: Attribute.String & Attribute.Required;
+    url: Attribute.String & Attribute.Required;
   };
 }
 

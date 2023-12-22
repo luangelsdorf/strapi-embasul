@@ -8,10 +8,11 @@
   "attributes": {
     "text": {
       "type": "string",
-      "required": false
+      "required": true
     },
     "url": {
-      "type": "string"
+      "type": "string",
+      "required": true
     }
   }
 }
