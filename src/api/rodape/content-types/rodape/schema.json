@@ -4,7 +4,8 @@
   "info": {
     "singularName": "rodape",
     "pluralName": "rodapes",
-    "displayName": "Rodapé"
+    "displayName": "Rodapé",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -18,6 +19,25 @@
     "text": {
       "type": "text",
       "required": true
+    },
+    "range": {
+      "type": "enumeration",
+      "enum": [
+        "até 100",
+        "de 100 a 1000",
+        "de 1000 a 10000",
+        "mais de 10000"
+      ]
+    },
+    "faixas": {
+      "type": "customField",
+      "options": [
+        "até 100",
+        "de 100 a 1000",
+        "de 1000 a 10000",
+        "mais de 10000"
+      ],
+      "customField": "plugin::multi-select.multi-select"
     }
   }
 }

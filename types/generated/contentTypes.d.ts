@@ -1143,6 +1143,7 @@ export interface ApiRodapeRodape extends Schema.SingleType {
     singularName: 'rodape';
     pluralName: 'rodapes';
     displayName: 'Rodap\u00E9';
+    description: '';
   };
   options: {
     draftAndPublish: false;
@@ -1150,6 +1151,14 @@ export interface ApiRodapeRodape extends Schema.SingleType {
   attributes: {
     title: Attribute.String & Attribute.Required;
     text: Attribute.Text & Attribute.Required;
+    range: Attribute.Enumeration<
+      ['at\u00E9 100', 'de 100 a 1000', 'de 1000 a 10000', 'mais de 10000']
+    >;
+    faixas: Attribute.JSON &
+      Attribute.CustomField<
+        'plugin::multi-select.multi-select',
+        ['at\u00E9 100', 'de 100 a 1000', 'de 1000 a 10000', 'mais de 10000']
+      >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
