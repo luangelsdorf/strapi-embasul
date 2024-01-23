@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * rodape controller
+ * footer controller
  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::rodape.rodape');
+module.exports = createCoreController('api::footer.footer');

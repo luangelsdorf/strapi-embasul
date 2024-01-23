@@ -20,9 +20,7 @@
       "type": "component",
       "repeatable": true,
       "component": "common.link",
-      "required": true,
-      "max": 3,
-      "min": 3
+      "required": true
     },
     "phone": {
       "type": "string",

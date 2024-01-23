@@ -67,7 +67,12 @@ export interface AboutStructure extends Schema.Component {
   attributes: {
     headline: Attribute.Component<'common.title'> & Attribute.Required;
     text: Attribute.Text & Attribute.Required;
-    statistics: Attribute.Component<'about.statistics'> & Attribute.Required;
+    statistics: Attribute.Component<'about.statistics', true> &
+      Attribute.Required &
+      Attribute.SetMinMax<{
+        min: 3;
+        max: 3;
+      }>;
     highlights: Attribute.Component<'nested.statistics', true> &
       Attribute.Required &
       Attribute.SetMinMax<{

@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * rodape service
+ * footer service
  */
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::rodape.rodape');
+module.exports = createCoreService('api::footer.footer');

@@ -18,9 +18,11 @@
     },
     "statistics": {
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "component": "about.statistics",
-      "required": true
+      "required": true,
+      "max": 3,
+      "min": 3
     },
     "highlights": {
       "type": "component",

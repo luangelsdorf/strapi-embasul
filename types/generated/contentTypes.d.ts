@@ -813,6 +813,36 @@ export interface ApiDigitalPrintingDigitalPrinting extends Schema.SingleType {
   };
 }
 
+export interface ApiFooterFooter extends Schema.SingleType {
+  collectionName: 'footers';
+  info: {
+    singularName: 'footer';
+    pluralName: 'footers';
+    displayName: 'Rodap\u00E9';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    text: Attribute.Text & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::footer.footer',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::footer.footer',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiHomeHome extends Schema.SingleType {
   collectionName: 'homes';
   info: {
@@ -858,12 +888,7 @@ export interface ApiInfoInfo extends Schema.SingleType {
   };
   attributes: {
     address: Attribute.Text & Attribute.Required;
-    socials: Attribute.Component<'common.link', true> &
-      Attribute.Required &
-      Attribute.SetMinMax<{
-        min: 3;
-        max: 3;
-      }>;
+    socials: Attribute.Component<'common.link', true> & Attribute.Required;
     phone: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -1118,7 +1143,7 @@ export interface ApiProjetoProjeto extends Schema.CollectionType {
         }
       >;
     gallery: Attribute.Media;
-    slug: Attribute.UID<'api::projeto.projeto', 'title'>;
+    slug: Attribute.UID<'api::projeto.projeto', 'title'> & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1130,45 +1155,6 @@ export interface ApiProjetoProjeto extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::projeto.projeto',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiRodapeRodape extends Schema.SingleType {
-  collectionName: 'rodapes';
-  info: {
-    singularName: 'rodape';
-    pluralName: 'rodapes';
-    displayName: 'Rodap\u00E9';
-    description: '';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    title: Attribute.String & Attribute.Required;
-    text: Attribute.Text & Attribute.Required;
-    range: Attribute.Enumeration<
-      ['at\u00E9 100', 'de 100 a 1000', 'de 1000 a 10000', 'mais de 10000']
-    >;
-    faixas: Attribute.JSON &
-      Attribute.CustomField<
-        'plugin::multi-select.multi-select',
-        ['at\u00E9 100', 'de 100 a 1000', 'de 1000 a 10000', 'mais de 10000']
-      >;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::rodape.rodape',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::rodape.rodape',
       'oneToOne',
       'admin::user'
     > &
@@ -1270,6 +1256,7 @@ declare module '@strapi/types' {
       'api::company.company': ApiCompanyCompany;
       'api::custom-composition.custom-composition': ApiCustomCompositionCustomComposition;
       'api::digital-printing.digital-printing': ApiDigitalPrintingDigitalPrinting;
+      'api::footer.footer': ApiFooterFooter;
       'api::home.home': ApiHomeHome;
       'api::info.info': ApiInfoInfo;
       'api::packaging-design.packaging-design': ApiPackagingDesignPackagingDesign;
@@ -1279,7 +1266,6 @@ declare module '@strapi/types' {
       'api::project.project': ApiProjectProject;
       'api::project-category.project-category': ApiProjectCategoryProjectCategory;
       'api::projeto.projeto': ApiProjetoProjeto;
-      'api::rodape.rodape': ApiRodapeRodape;
       'api::sustainability.sustainability': ApiSustainabilitySustainability;
       'api::tech-support.tech-support': ApiTechSupportTechSupport;
     }
