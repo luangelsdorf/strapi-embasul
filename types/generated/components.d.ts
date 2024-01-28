@@ -471,6 +471,7 @@ export interface ProductsBannerCta extends Schema.Component {
     ctaText: Attribute.Text & Attribute.Required;
     shortText: Attribute.String & Attribute.Required;
     link: Attribute.Component<'common.link'> & Attribute.Required;
+    cover: Attribute.Media & Attribute.Required;
   };
 }
 

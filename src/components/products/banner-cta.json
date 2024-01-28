@@ -31,6 +31,14 @@
       "repeatable": false,
       "component": "common.link",
       "required": true
+    },
+    "cover": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
     }
   }
 }

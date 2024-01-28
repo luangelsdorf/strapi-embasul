@@ -1,0 +1,34 @@
+{
+  "kind": "singleType",
+  "collectionName": "flexos",
+  "info": {
+    "singularName": "flexo",
+    "pluralName": "flexos",
+    "displayName": "Produtos - Impressão Flexográfica",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "banner": {
+      "type": "component",
+      "repeatable": false,
+      "component": "products.banner-cta",
+      "required": true
+    },
+    "highlights": {
+      "type": "component",
+      "repeatable": true,
+      "component": "nested.icon-card-title",
+      "max": 4,
+      "min": 2
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.call-to-action"
+    }
+  }
+}

@@ -813,6 +813,42 @@ export interface ApiDigitalPrintingDigitalPrinting extends Schema.SingleType {
   };
 }
 
+export interface ApiFlexoFlexo extends Schema.SingleType {
+  collectionName: 'flexos';
+  info: {
+    singularName: 'flexo';
+    pluralName: 'flexos';
+    displayName: 'Produtos - Impress\u00E3o Flexogr\u00E1fica';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    banner: Attribute.Component<'products.banner-cta'> & Attribute.Required;
+    highlights: Attribute.Component<'nested.icon-card-title', true> &
+      Attribute.SetMinMax<{
+        min: 2;
+        max: 4;
+      }>;
+    cta: Attribute.Component<'common.call-to-action'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::flexo.flexo',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::flexo.flexo',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiFooterFooter extends Schema.SingleType {
   collectionName: 'footers';
   info: {
@@ -1142,7 +1178,7 @@ export interface ApiProjetoProjeto extends Schema.CollectionType {
           preset: 'light';
         }
       >;
-    gallery: Attribute.Media;
+    gallery: Attribute.Media & Attribute.Required;
     slug: Attribute.UID<'api::projeto.projeto', 'title'> & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -1256,6 +1292,7 @@ declare module '@strapi/types' {
       'api::company.company': ApiCompanyCompany;
       'api::custom-composition.custom-composition': ApiCustomCompositionCustomComposition;
       'api::digital-printing.digital-printing': ApiDigitalPrintingDigitalPrinting;
+      'api::flexo.flexo': ApiFlexoFlexo;
       'api::footer.footer': ApiFooterFooter;
       'api::home.home': ApiHomeHome;
       'api::info.info': ApiInfoInfo;
