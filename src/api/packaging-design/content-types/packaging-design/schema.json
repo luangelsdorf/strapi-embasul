@@ -4,21 +4,33 @@
   "info": {
     "singularName": "packaging-design",
     "pluralName": "packaging-designs",
-    "displayName": "Produtos - Design de Embalagens"
+    "displayName": "Produtos - Design de Embalagens",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
-    "text": {
-      "type": "customField",
-      "options": {
-        "output": "HTML",
-        "preset": "light"
-      },
+    "banner": {
+      "type": "component",
+      "repeatable": false,
+      "component": "products.banner-cta",
+      "required": true
+    },
+    "highlights": {
+      "type": "component",
+      "repeatable": true,
+      "component": "nested.icon-card-title",
       "required": true,
-      "customField": "plugin::ckeditor.CKEditor"
+      "max": 4,
+      "min": 4
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.call-to-action",
+      "required": true
     }
   }
 }

@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "tech_supports",
+  "collectionName": "contacts",
   "info": {
-    "singularName": "tech-support",
-    "pluralName": "tech-supports",
-    "displayName": "Produtos - Suporte Técnico",
+    "singularName": "contact",
+    "pluralName": "contacts",
+    "displayName": "Contato",
     "description": ""
   },
   "options": {
@@ -12,24 +12,29 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "banner": {
+    "headline": {
       "type": "component",
       "repeatable": false,
-      "component": "products.banner-cta",
+      "component": "common.title",
       "required": true
     },
-    "highlights": {
+    "text": {
+      "type": "text",
+      "required": true
+    },
+    "button": {
       "type": "component",
-      "repeatable": true,
-      "component": "nested.icon-card-title",
-      "required": true,
-      "max": 4,
-      "min": 4
+      "repeatable": false,
+      "component": "common.link"
     },
     "cta": {
       "type": "component",
       "repeatable": false,
       "component": "common.call-to-action",
+      "required": true
+    },
+    "sendBtnLabel": {
+      "type": "string",
       "required": true
     }
   }

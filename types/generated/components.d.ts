@@ -323,6 +323,18 @@ export interface NestedOverlineCard extends Schema.Component {
   };
 }
 
+export interface NestedSocialIcon extends Schema.Component {
+  collectionName: 'components_nested_social_icons';
+  info: {
+    displayName: 'SocialIcon';
+  };
+  attributes: {
+    icon: Attribute.Media & Attribute.Required;
+    title: Attribute.String & Attribute.Required;
+    url: Attribute.String & Attribute.Required;
+  };
+}
+
 export interface NestedStatistics extends Schema.Component {
   collectionName: 'components_nested_statistics';
   info: {
@@ -744,6 +756,7 @@ declare module '@strapi/types' {
       'nested.icon-card': NestedIconCard;
       'nested.link-card': NestedLinkCard;
       'nested.overline-card': NestedOverlineCard;
+      'nested.social-icon': NestedSocialIcon;
       'nested.statistics': NestedStatistics;
       'nested.testimonial-card': NestedTestimonialCard;
       'nested.text-card': NestedTextCard;

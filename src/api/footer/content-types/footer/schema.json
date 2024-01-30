@@ -4,7 +4,8 @@
   "info": {
     "singularName": "footer",
     "pluralName": "footers",
-    "displayName": "Rodapé"
+    "displayName": "Rodapé",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -17,6 +18,30 @@
     },
     "text": {
       "type": "text",
+      "required": true
+    },
+    "phone": {
+      "type": "string",
+      "required": true
+    },
+    "address": {
+      "type": "text",
+      "required": true
+    },
+    "usefulLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.link",
+      "max": 5,
+      "min": 1,
+      "required": true
+    },
+    "socials": {
+      "type": "component",
+      "repeatable": true,
+      "component": "nested.social-icon",
+      "max": 3,
+      "min": 1,
       "required": true
     }
   }

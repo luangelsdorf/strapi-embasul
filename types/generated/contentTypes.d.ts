@@ -746,6 +746,40 @@ export interface ApiCompanyCompany extends Schema.SingleType {
   };
 }
 
+export interface ApiContactContact extends Schema.SingleType {
+  collectionName: 'contacts';
+  info: {
+    singularName: 'contact';
+    pluralName: 'contacts';
+    displayName: 'Contato';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    headline: Attribute.Component<'common.title'> & Attribute.Required;
+    text: Attribute.Text & Attribute.Required;
+    button: Attribute.Component<'common.link'>;
+    cta: Attribute.Component<'common.call-to-action'> & Attribute.Required;
+    sendBtnLabel: Attribute.String & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::contact.contact',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::contact.contact',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiCustomCompositionCustomComposition
   extends Schema.SingleType {
   collectionName: 'custom_compositions';
@@ -855,6 +889,7 @@ export interface ApiFooterFooter extends Schema.SingleType {
     singularName: 'footer';
     pluralName: 'footers';
     displayName: 'Rodap\u00E9';
+    description: '';
   };
   options: {
     draftAndPublish: false;
@@ -862,6 +897,20 @@ export interface ApiFooterFooter extends Schema.SingleType {
   attributes: {
     title: Attribute.String & Attribute.Required;
     text: Attribute.Text & Attribute.Required;
+    phone: Attribute.String & Attribute.Required;
+    address: Attribute.Text & Attribute.Required;
+    usefulLinks: Attribute.Component<'common.link', true> &
+      Attribute.Required &
+      Attribute.SetMinMax<{
+        min: 1;
+        max: 5;
+      }>;
+    socials: Attribute.Component<'nested.social-icon', true> &
+      Attribute.Required &
+      Attribute.SetMinMax<{
+        min: 1;
+        max: 3;
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -902,6 +951,7 @@ export interface ApiHomeHome extends Schema.SingleType {
     sustainability: Attribute.Component<'home.sustainability'> &
       Attribute.Required;
     certificates: Attribute.Component<'home.certificates'> & Attribute.Required;
+    videoLink: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<'api::home.home', 'oneToOne', 'admin::user'> &
@@ -941,20 +991,20 @@ export interface ApiPackagingDesignPackagingDesign extends Schema.SingleType {
     singularName: 'packaging-design';
     pluralName: 'packaging-designs';
     displayName: 'Produtos - Design de Embalagens';
+    description: '';
   };
   options: {
     draftAndPublish: false;
   };
   attributes: {
-    text: Attribute.RichText &
+    banner: Attribute.Component<'products.banner-cta'> & Attribute.Required;
+    highlights: Attribute.Component<'nested.icon-card-title', true> &
       Attribute.Required &
-      Attribute.CustomField<
-        'plugin::ckeditor.CKEditor',
-        {
-          output: 'HTML';
-          preset: 'light';
-        }
-      >;
+      Attribute.SetMinMax<{
+        min: 4;
+        max: 4;
+      }>;
+    cta: Attribute.Component<'common.call-to-action'> & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -1241,20 +1291,20 @@ export interface ApiTechSupportTechSupport extends Schema.SingleType {
     singularName: 'tech-support';
     pluralName: 'tech-supports';
     displayName: 'Produtos - Suporte T\u00E9cnico';
+    description: '';
   };
   options: {
     draftAndPublish: false;
   };
   attributes: {
-    text: Attribute.RichText &
+    banner: Attribute.Component<'products.banner-cta'> & Attribute.Required;
+    highlights: Attribute.Component<'nested.icon-card-title', true> &
       Attribute.Required &
-      Attribute.CustomField<
-        'plugin::ckeditor.CKEditor',
-        {
-          output: 'HTML';
-          preset: 'light';
-        }
-      >;
+      Attribute.SetMinMax<{
+        min: 4;
+        max: 4;
+      }>;
+    cta: Attribute.Component<'common.call-to-action'> & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -1290,6 +1340,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::ai-design.ai-design': ApiAiDesignAiDesign;
       'api::company.company': ApiCompanyCompany;
+      'api::contact.contact': ApiContactContact;
       'api::custom-composition.custom-composition': ApiCustomCompositionCustomComposition;
       'api::digital-printing.digital-printing': ApiDigitalPrintingDigitalPrinting;
       'api::flexo.flexo': ApiFlexoFlexo;
