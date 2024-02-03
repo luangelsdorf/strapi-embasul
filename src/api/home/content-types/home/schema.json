@@ -43,10 +43,6 @@
       "repeatable": false,
       "component": "home.certificates",
       "required": true
-    },
-    "videoLink": {
-      "type": "string",
-      "required": true
     }
   }
 }

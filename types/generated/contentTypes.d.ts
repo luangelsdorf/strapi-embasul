@@ -911,6 +911,7 @@ export interface ApiFooterFooter extends Schema.SingleType {
         min: 1;
         max: 3;
       }>;
+    email: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -951,7 +952,6 @@ export interface ApiHomeHome extends Schema.SingleType {
     sustainability: Attribute.Component<'home.sustainability'> &
       Attribute.Required;
     certificates: Attribute.Component<'home.certificates'> & Attribute.Required;
-    videoLink: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<'api::home.home', 'oneToOne', 'admin::user'> &
