@@ -961,30 +961,6 @@ export interface ApiHomeHome extends Schema.SingleType {
   };
 }
 
-export interface ApiInfoInfo extends Schema.SingleType {
-  collectionName: 'infos';
-  info: {
-    singularName: 'info';
-    pluralName: 'infos';
-    displayName: 'Informa\u00E7\u00F5es de Contato';
-    description: '';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    address: Attribute.Text & Attribute.Required;
-    socials: Attribute.Component<'common.link', true> & Attribute.Required;
-    phone: Attribute.String & Attribute.Required;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<'api::info.info', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<'api::info.info', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-  };
-}
-
 export interface ApiPackagingDesignPackagingDesign extends Schema.SingleType {
   collectionName: 'packaging_designs';
   info: {
@@ -1346,7 +1322,6 @@ declare module '@strapi/types' {
       'api::flexo.flexo': ApiFlexoFlexo;
       'api::footer.footer': ApiFooterFooter;
       'api::home.home': ApiHomeHome;
-      'api::info.info': ApiInfoInfo;
       'api::packaging-design.packaging-design': ApiPackagingDesignPackagingDesign;
       'api::people.people': ApiPeoplePeople;
       'api::politica-de-privacidade.politica-de-privacidade': ApiPoliticaDePrivacidadePoliticaDePrivacidade;

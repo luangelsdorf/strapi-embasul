@@ -18,10 +18,10 @@
     "certificates": {
       "type": "component",
       "repeatable": true,
-      "component": "common.image",
+      "component": "common.link-image",
+      "required": true,
       "max": 3,
-      "min": 3,
-      "required": true
+      "min": 3
     }
   }
 }

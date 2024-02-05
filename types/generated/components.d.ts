@@ -188,7 +188,7 @@ export interface HomeCertificates extends Schema.Component {
   attributes: {
     headline: Attribute.Component<'common.title'>;
     text: Attribute.Text & Attribute.Required;
-    certificates: Attribute.Component<'common.image', true> &
+    certificates: Attribute.Component<'common.link-image', true> &
       Attribute.Required &
       Attribute.SetMinMax<{
         min: 3;
