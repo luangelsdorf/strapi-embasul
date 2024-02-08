@@ -261,6 +261,18 @@ export interface InnovationIso9001Processes extends Schema.Component {
   };
 }
 
+export interface NestedHeaderHighlight extends Schema.Component {
+  collectionName: 'components_nested_header_highlights';
+  info: {
+    displayName: 'HeaderHighlight';
+  };
+  attributes: {
+    cover: Attribute.Media & Attribute.Required;
+    title: Attribute.String & Attribute.Required;
+    url: Attribute.String & Attribute.Required;
+  };
+}
+
 export interface NestedIconCardShort extends Schema.Component {
   collectionName: 'components_nested_icon_card_shorts';
   info: {
@@ -397,6 +409,7 @@ export interface PeopleEthicsAndConduct extends Schema.Component {
     ethicalManual: Attribute.Text & Attribute.Required;
     downloadLink: Attribute.Component<'common.link'> & Attribute.Required;
     ethicalValues: Attribute.Text & Attribute.Required;
+    file: Attribute.Media;
   };
 }
 
@@ -676,6 +689,7 @@ export interface SustainabilityPolicy extends Schema.Component {
   collectionName: 'components_sustainability_policies';
   info: {
     displayName: 'Policy';
+    description: '';
   };
   attributes: {
     headline: Attribute.Component<'common.title'> & Attribute.Required;
@@ -688,6 +702,7 @@ export interface SustainabilityPolicy extends Schema.Component {
         min: 6;
         max: 6;
       }>;
+    policyFile: Attribute.Media;
   };
 }
 
@@ -751,6 +766,7 @@ declare module '@strapi/types' {
       'innovation.ai-supported-design': InnovationAiSupportedDesign;
       'innovation.digital-printing': InnovationDigitalPrinting;
       'innovation.iso-9001-processes': InnovationIso9001Processes;
+      'nested.header-highlight': NestedHeaderHighlight;
       'nested.icon-card-short': NestedIconCardShort;
       'nested.icon-card-title': NestedIconCardTitle;
       'nested.icon-card': NestedIconCard;

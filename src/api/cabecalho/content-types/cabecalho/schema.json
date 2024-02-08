@@ -1,0 +1,51 @@
+{
+  "kind": "singleType",
+  "collectionName": "cabecalhos",
+  "info": {
+    "singularName": "cabecalho",
+    "pluralName": "cabecalhos",
+    "displayName": "Cabeçalho (Destaques)",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "company": {
+      "type": "component",
+      "repeatable": true,
+      "component": "nested.header-highlight",
+      "required": false,
+      "max": 2
+    },
+    "products": {
+      "type": "component",
+      "repeatable": true,
+      "component": "nested.header-highlight",
+      "required": false,
+      "max": 2
+    },
+    "sustain": {
+      "type": "component",
+      "repeatable": true,
+      "component": "nested.header-highlight",
+      "required": false,
+      "max": 2
+    },
+    "innovation": {
+      "type": "component",
+      "repeatable": true,
+      "component": "nested.header-highlight",
+      "required": false,
+      "max": 2
+    },
+    "people": {
+      "type": "component",
+      "repeatable": true,
+      "component": "nested.header-highlight",
+      "required": false,
+      "max": 2
+    }
+  }
+}

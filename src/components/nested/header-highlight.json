@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_nested_header_highlights",
+  "info": {
+    "displayName": "HeaderHighlight"
+  },
+  "options": {},
+  "attributes": {
+    "cover": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

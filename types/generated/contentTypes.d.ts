@@ -714,6 +714,55 @@ export interface ApiAiDesignAiDesign extends Schema.SingleType {
   };
 }
 
+export interface ApiCabecalhoCabecalho extends Schema.SingleType {
+  collectionName: 'cabecalhos';
+  info: {
+    singularName: 'cabecalho';
+    pluralName: 'cabecalhos';
+    displayName: 'Cabe\u00E7alho (Destaques)';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    company: Attribute.Component<'nested.header-highlight', true> &
+      Attribute.SetMinMax<{
+        max: 2;
+      }>;
+    products: Attribute.Component<'nested.header-highlight', true> &
+      Attribute.SetMinMax<{
+        max: 2;
+      }>;
+    sustain: Attribute.Component<'nested.header-highlight', true> &
+      Attribute.SetMinMax<{
+        max: 2;
+      }>;
+    innovation: Attribute.Component<'nested.header-highlight', true> &
+      Attribute.SetMinMax<{
+        max: 2;
+      }>;
+    people: Attribute.Component<'nested.header-highlight', true> &
+      Attribute.SetMinMax<{
+        max: 2;
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::cabecalho.cabecalho',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::cabecalho.cabecalho',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiCompanyCompany extends Schema.SingleType {
   collectionName: 'companies';
   info: {
@@ -1315,6 +1364,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::ai-design.ai-design': ApiAiDesignAiDesign;
+      'api::cabecalho.cabecalho': ApiCabecalhoCabecalho;
       'api::company.company': ApiCompanyCompany;
       'api::contact.contact': ApiContactContact;
       'api::custom-composition.custom-composition': ApiCustomCompositionCustomComposition;

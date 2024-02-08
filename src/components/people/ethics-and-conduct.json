@@ -25,6 +25,13 @@
     "ethicalValues": {
       "type": "text",
       "required": true
+    },
+    "file": {
+      "allowedTypes": [
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
