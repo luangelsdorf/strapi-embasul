@@ -961,6 +961,7 @@ export interface ApiFooterFooter extends Schema.SingleType {
         max: 3;
       }>;
     email: Attribute.String & Attribute.Required;
+    whatsapp: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
