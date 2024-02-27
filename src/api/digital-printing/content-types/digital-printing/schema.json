@@ -27,7 +27,8 @@
     "benefits": {
       "type": "component",
       "repeatable": false,
-      "component": "products.mosaic"
+      "component": "products.mosaic",
+      "required": true
     },
     "cta": {
       "type": "component",

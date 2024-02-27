@@ -877,7 +877,7 @@ export interface ApiDigitalPrintingDigitalPrinting extends Schema.SingleType {
     banner: Attribute.Component<'products.banner-cta'> & Attribute.Required;
     details: Attribute.Component<'products.2-image-content'> &
       Attribute.Required;
-    benefits: Attribute.Component<'products.mosaic'>;
+    benefits: Attribute.Component<'products.mosaic'> & Attribute.Required;
     cta: Attribute.Component<'common.call-to-action'> & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;

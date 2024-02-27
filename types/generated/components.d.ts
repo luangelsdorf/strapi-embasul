@@ -471,15 +471,17 @@ export interface Products2ImageContent extends Schema.Component {
   collectionName: 'components_products_2_image_contents';
   info: {
     displayName: '2ImageContent';
+    description: '';
   };
   attributes: {
     collage: Attribute.Component<'common.image', true> &
+      Attribute.Required &
       Attribute.SetMinMax<{
         min: 2;
         max: 2;
       }>;
     headline: Attribute.Component<'common.title'> & Attribute.Required;
-    text: Attribute.Text;
+    text: Attribute.Text & Attribute.Required;
   };
 }
 
@@ -559,13 +561,14 @@ export interface ProductsMosaic extends Schema.Component {
   collectionName: 'components_products_mosaics';
   info: {
     displayName: 'Mosaic';
+    description: '';
   };
   attributes: {
     headline: Attribute.Component<'common.title'>;
     text: Attribute.Text & Attribute.Required;
     image1: Attribute.Media & Attribute.Required;
     title: Attribute.String & Attribute.Required;
-    text2: Attribute.Text;
+    text2: Attribute.Text & Attribute.Required;
     image2: Attribute.Media & Attribute.Required;
   };
 }

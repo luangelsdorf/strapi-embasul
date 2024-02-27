@@ -1,7 +1,8 @@
 {
   "collectionName": "components_products_2_image_contents",
   "info": {
-    "displayName": "2ImageContent"
+    "displayName": "2ImageContent",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -10,7 +11,8 @@
       "repeatable": true,
       "component": "common.image",
       "max": 2,
-      "min": 2
+      "min": 2,
+      "required": true
     },
     "headline": {
       "type": "component",
@@ -19,7 +21,8 @@
       "required": true
     },
     "text": {
-      "type": "text"
+      "type": "text",
+      "required": true
     }
   }
 }
