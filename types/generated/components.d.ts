@@ -446,6 +446,7 @@ export interface PeoplePeople extends Schema.Component {
         max: 3;
       }>;
     details: Attribute.Component<'nested.icon-card-title'> & Attribute.Required;
+    button: Attribute.Component<'common.link'> & Attribute.Required;
   };
 }
 

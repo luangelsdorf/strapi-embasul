@@ -19,6 +19,12 @@
       "repeatable": false,
       "component": "nested.icon-card-title",
       "required": true
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.link",
+      "required": true
     }
   }
 }
