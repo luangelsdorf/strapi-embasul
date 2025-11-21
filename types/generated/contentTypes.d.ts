@@ -812,6 +812,8 @@ export interface ApiContactContact extends Schema.SingleType {
     button: Attribute.Component<'common.link'>;
     cta: Attribute.Component<'common.call-to-action'> & Attribute.Required;
     sendBtnLabel: Attribute.String & Attribute.Required;
+    recipientEmail1: Attribute.String & Attribute.Required;
+    recipientEmail2: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
