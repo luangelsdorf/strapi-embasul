@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "faq_items",
+  "info": {
+    "singularName": "faq-item",
+    "pluralName": "faq-items",
+    "displayName": "Perguntas (FAQ)",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "question": {
+      "type": "string",
+      "required": true
+    },
+    "answer": {
+      "type": "customField",
+      "customField": "plugin::ckeditor.CKEditor",
+      "required": true,
+      "options": {
+        "preset": "standard",
+        "output": "HTML"
+      }
+    },
+    "order": {
+      "type": "integer",
+      "default": 0
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::faq-category.faq-category",
+      "inversedBy": "items"
+    }
+  }
+}

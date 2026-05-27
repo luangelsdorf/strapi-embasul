@@ -32,7 +32,7 @@
       "type": "component",
       "repeatable": true,
       "component": "common.link",
-      "max": 5,
+      "max": 8,
       "min": 1,
       "required": true
     },

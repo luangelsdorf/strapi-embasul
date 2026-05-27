@@ -714,6 +714,37 @@ export interface ApiAiDesignAiDesign extends Schema.SingleType {
   };
 }
 
+export interface ApiBlogPageBlogPage extends Schema.SingleType {
+  collectionName: 'blog_pages';
+  info: {
+    singularName: 'blog-page';
+    pluralName: 'blog-pages';
+    displayName: 'Blog (P\u00E1gina)';
+    description: 'Configura\u00E7\u00F5es da p\u00E1gina de listagem do Blog';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    overline: Attribute.String;
+    title: Attribute.String & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::blog-page.blog-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::blog-page.blog-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiCabecalhoCabecalho extends Schema.SingleType {
   collectionName: 'cabecalhos';
   info: {
@@ -898,6 +929,87 @@ export interface ApiDigitalPrintingDigitalPrinting extends Schema.SingleType {
   };
 }
 
+export interface ApiFaqCategoryFaqCategory extends Schema.CollectionType {
+  collectionName: 'faq_categories';
+  info: {
+    singularName: 'faq-category';
+    pluralName: 'faq-categories';
+    displayName: 'Categorias (FAQ)';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    name: Attribute.String & Attribute.Required;
+    slug: Attribute.UID<'api::faq-category.faq-category', 'name'>;
+    items: Attribute.Relation<
+      'api::faq-category.faq-category',
+      'oneToMany',
+      'api::faq-item.faq-item'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::faq-category.faq-category',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::faq-category.faq-category',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiFaqItemFaqItem extends Schema.CollectionType {
+  collectionName: 'faq_items';
+  info: {
+    singularName: 'faq-item';
+    pluralName: 'faq-items';
+    displayName: 'Perguntas (FAQ)';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    question: Attribute.String & Attribute.Required;
+    answer: Attribute.RichText &
+      Attribute.Required &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          preset: 'standard';
+          output: 'HTML';
+        }
+      >;
+    order: Attribute.Integer & Attribute.DefaultTo<0>;
+    category: Attribute.Relation<
+      'api::faq-item.faq-item',
+      'manyToOne',
+      'api::faq-category.faq-category'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::faq-item.faq-item',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::faq-item.faq-item',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiFlexoFlexo extends Schema.SingleType {
   collectionName: 'flexos';
   info: {
@@ -954,7 +1066,7 @@ export interface ApiFooterFooter extends Schema.SingleType {
       Attribute.Required &
       Attribute.SetMinMax<{
         min: 1;
-        max: 5;
+        max: 8;
       }>;
     socials: Attribute.Component<'nested.social-icon', true> &
       Attribute.Required &
@@ -1117,6 +1229,82 @@ export interface ApiPoliticaDePrivacidadePoliticaDePrivacidade
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::politica-de-privacidade.politica-de-privacidade',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiPostPost extends Schema.CollectionType {
+  collectionName: 'posts';
+  info: {
+    singularName: 'post';
+    pluralName: 'posts';
+    displayName: 'Posts (Blog)';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    slug: Attribute.UID<'api::post.post', 'title'> & Attribute.Required;
+    content: Attribute.RichText &
+      Attribute.Required &
+      Attribute.CustomField<
+        'plugin::ckeditor.CKEditor',
+        {
+          preset: 'rich';
+          output: 'HTML';
+        }
+      >;
+    cover: Attribute.Media & Attribute.Required;
+    publishedDate: Attribute.DateTime & Attribute.Required;
+    category: Attribute.Relation<
+      'api::post.post',
+      'manyToOne',
+      'api::post-category.post-category'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::post.post', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::post.post', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiPostCategoryPostCategory extends Schema.CollectionType {
+  collectionName: 'post_categories';
+  info: {
+    singularName: 'post-category';
+    pluralName: 'post-categories';
+    displayName: 'Categorias (Blog)';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    name: Attribute.String & Attribute.Required;
+    slug: Attribute.UID<'api::post-category.post-category', 'name'>;
+    posts: Attribute.Relation<
+      'api::post-category.post-category',
+      'oneToMany',
+      'api::post.post'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::post-category.post-category',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::post-category.post-category',
       'oneToOne',
       'admin::user'
     > &
@@ -1367,17 +1555,22 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::ai-design.ai-design': ApiAiDesignAiDesign;
+      'api::blog-page.blog-page': ApiBlogPageBlogPage;
       'api::cabecalho.cabecalho': ApiCabecalhoCabecalho;
       'api::company.company': ApiCompanyCompany;
       'api::contact.contact': ApiContactContact;
       'api::custom-composition.custom-composition': ApiCustomCompositionCustomComposition;
       'api::digital-printing.digital-printing': ApiDigitalPrintingDigitalPrinting;
+      'api::faq-category.faq-category': ApiFaqCategoryFaqCategory;
+      'api::faq-item.faq-item': ApiFaqItemFaqItem;
       'api::flexo.flexo': ApiFlexoFlexo;
       'api::footer.footer': ApiFooterFooter;
       'api::home.home': ApiHomeHome;
       'api::packaging-design.packaging-design': ApiPackagingDesignPackagingDesign;
       'api::people.people': ApiPeoplePeople;
       'api::politica-de-privacidade.politica-de-privacidade': ApiPoliticaDePrivacidadePoliticaDePrivacidade;
+      'api::post.post': ApiPostPost;
+      'api::post-category.post-category': ApiPostCategoryPostCategory;
       'api::processos-iso-9001.processos-iso-9001': ApiProcessosIso9001ProcessosIso9001;
       'api::project.project': ApiProjectProject;
       'api::project-category.project-category': ApiProjectCategoryProjectCategory;

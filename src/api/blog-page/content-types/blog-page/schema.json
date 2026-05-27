@@ -1,0 +1,23 @@
+{
+  "kind": "singleType",
+  "collectionName": "blog_pages",
+  "info": {
+    "singularName": "blog-page",
+    "pluralName": "blog-pages",
+    "displayName": "Blog (Página)",
+    "description": "Configurações da página de listagem do Blog"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "overline": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
