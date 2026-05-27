@@ -688,6 +688,11 @@ export interface ApiAiDesignAiDesign extends Schema.SingleType {
   options: {
     draftAndPublish: false;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
     banner: Attribute.Component<'nested.overline-card'> & Attribute.Required;
     highlights: Attribute.Component<'nested.statistics', true> &
@@ -711,6 +716,12 @@ export interface ApiAiDesignAiDesign extends Schema.SingleType {
       'admin::user'
     > &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::ai-design.ai-design',
+      'oneToMany',
+      'api::ai-design.ai-design'
+    >;
+    locale: Attribute.String;
   };
 }
 
@@ -724,6 +735,11 @@ export interface ApiBlogPageBlogPage extends Schema.SingleType {
   };
   options: {
     draftAndPublish: false;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
   };
   attributes: {
     overline: Attribute.String;
@@ -742,6 +758,12 @@ export interface ApiBlogPageBlogPage extends Schema.SingleType {
       'admin::user'
     > &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::blog-page.blog-page',
+      'oneToMany',
+      'api::blog-page.blog-page'
+    >;
+    locale: Attribute.String;
   };
 }
 
@@ -755,6 +777,11 @@ export interface ApiCabecalhoCabecalho extends Schema.SingleType {
   };
   options: {
     draftAndPublish: false;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
   };
   attributes: {
     company: Attribute.Component<'nested.header-highlight', true> &
@@ -791,6 +818,12 @@ export interface ApiCabecalhoCabecalho extends Schema.SingleType {
       'admin::user'
     > &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::cabecalho.cabecalho',
+      'oneToMany',
+      'api::cabecalho.cabecalho'
+    >;
+    locale: Attribute.String;
   };
 }
 
@@ -804,6 +837,11 @@ export interface ApiCompanyCompany extends Schema.SingleType {
   };
   options: {
     draftAndPublish: false;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
   };
   attributes: {
     history: Attribute.Component<'about.our-history'> & Attribute.Required;
@@ -823,6 +861,12 @@ export interface ApiCompanyCompany extends Schema.SingleType {
       'admin::user'
     > &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::company.company',
+      'oneToMany',
+      'api::company.company'
+    >;
+    locale: Attribute.String;
   };
 }
 
@@ -837,6 +881,11 @@ export interface ApiContactContact extends Schema.SingleType {
   options: {
     draftAndPublish: false;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
     headline: Attribute.Component<'common.title'> & Attribute.Required;
     text: Attribute.Text & Attribute.Required;
@@ -845,6 +894,8 @@ export interface ApiContactContact extends Schema.SingleType {
     sendBtnLabel: Attribute.String & Attribute.Required;
     recipientEmail1: Attribute.String & Attribute.Required;
     recipientEmail2: Attribute.String;
+    hrEmail: Attribute.String;
+    hrPhone: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -859,6 +910,12 @@ export interface ApiContactContact extends Schema.SingleType {
       'admin::user'
     > &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::contact.contact',
+      'oneToMany',
+      'api::contact.contact'
+    >;
+    locale: Attribute.String;
   };
 }
 
@@ -873,6 +930,11 @@ export interface ApiCustomCompositionCustomComposition
   };
   options: {
     draftAndPublish: false;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
   };
   attributes: {
     banner: Attribute.Component<'common.title'> & Attribute.Required;
@@ -892,6 +954,12 @@ export interface ApiCustomCompositionCustomComposition
       'admin::user'
     > &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::custom-composition.custom-composition',
+      'oneToMany',
+      'api::custom-composition.custom-composition'
+    >;
+    locale: Attribute.String;
   };
 }
 
@@ -905,6 +973,11 @@ export interface ApiDigitalPrintingDigitalPrinting extends Schema.SingleType {
   };
   options: {
     draftAndPublish: false;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
   };
   attributes: {
     banner: Attribute.Component<'products.banner-cta'> & Attribute.Required;
@@ -926,6 +999,12 @@ export interface ApiDigitalPrintingDigitalPrinting extends Schema.SingleType {
       'admin::user'
     > &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::digital-printing.digital-printing',
+      'oneToMany',
+      'api::digital-printing.digital-printing'
+    >;
+    locale: Attribute.String;
   };
 }
 
@@ -939,6 +1018,11 @@ export interface ApiFaqCategoryFaqCategory extends Schema.CollectionType {
   };
   options: {
     draftAndPublish: false;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
   };
   attributes: {
     name: Attribute.String & Attribute.Required;
@@ -962,6 +1046,12 @@ export interface ApiFaqCategoryFaqCategory extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::faq-category.faq-category',
+      'oneToMany',
+      'api::faq-category.faq-category'
+    >;
+    locale: Attribute.String;
   };
 }
 
@@ -975,6 +1065,11 @@ export interface ApiFaqItemFaqItem extends Schema.CollectionType {
   };
   options: {
     draftAndPublish: false;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
   };
   attributes: {
     question: Attribute.String & Attribute.Required;
@@ -1007,6 +1102,12 @@ export interface ApiFaqItemFaqItem extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::faq-item.faq-item',
+      'oneToMany',
+      'api::faq-item.faq-item'
+    >;
+    locale: Attribute.String;
   };
 }
 
@@ -1020,6 +1121,11 @@ export interface ApiFlexoFlexo extends Schema.SingleType {
   };
   options: {
     draftAndPublish: false;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
   };
   attributes: {
     banner: Attribute.Component<'products.banner-cta'> & Attribute.Required;
@@ -1043,6 +1149,12 @@ export interface ApiFlexoFlexo extends Schema.SingleType {
       'admin::user'
     > &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::flexo.flexo',
+      'oneToMany',
+      'api::flexo.flexo'
+    >;
+    locale: Attribute.String;
   };
 }
 
@@ -1056,6 +1168,11 @@ export interface ApiFooterFooter extends Schema.SingleType {
   };
   options: {
     draftAndPublish: false;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
   };
   attributes: {
     title: Attribute.String & Attribute.Required;
@@ -1090,6 +1207,12 @@ export interface ApiFooterFooter extends Schema.SingleType {
       'admin::user'
     > &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::footer.footer',
+      'oneToMany',
+      'api::footer.footer'
+    >;
+    locale: Attribute.String;
   };
 }
 
@@ -1103,6 +1226,11 @@ export interface ApiHomeHome extends Schema.SingleType {
   };
   options: {
     draftAndPublish: false;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
   };
   attributes: {
     banner: Attribute.Component<'home.banner'> & Attribute.Required;
@@ -1122,6 +1250,12 @@ export interface ApiHomeHome extends Schema.SingleType {
       Attribute.Private;
     updatedBy: Attribute.Relation<'api::home.home', 'oneToOne', 'admin::user'> &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::home.home',
+      'oneToMany',
+      'api::home.home'
+    >;
+    locale: Attribute.String;
   };
 }
 
@@ -1135,6 +1269,11 @@ export interface ApiPackagingDesignPackagingDesign extends Schema.SingleType {
   };
   options: {
     draftAndPublish: false;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
   };
   attributes: {
     banner: Attribute.Component<'products.banner-cta'> & Attribute.Required;
@@ -1159,6 +1298,12 @@ export interface ApiPackagingDesignPackagingDesign extends Schema.SingleType {
       'admin::user'
     > &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::packaging-design.packaging-design',
+      'oneToMany',
+      'api::packaging-design.packaging-design'
+    >;
+    locale: Attribute.String;
   };
 }
 
@@ -1172,6 +1317,11 @@ export interface ApiPeoplePeople extends Schema.SingleType {
   };
   options: {
     draftAndPublish: false;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
   };
   attributes: {
     banner: Attribute.Component<'products.banner-cta'> & Attribute.Required;
@@ -1194,6 +1344,12 @@ export interface ApiPeoplePeople extends Schema.SingleType {
       'admin::user'
     > &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::people.people',
+      'oneToMany',
+      'api::people.people'
+    >;
+    locale: Attribute.String;
   };
 }
 
@@ -1208,6 +1364,11 @@ export interface ApiPoliticaDePrivacidadePoliticaDePrivacidade
   };
   options: {
     draftAndPublish: false;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
   };
   attributes: {
     text: Attribute.RichText &
@@ -1233,6 +1394,12 @@ export interface ApiPoliticaDePrivacidadePoliticaDePrivacidade
       'admin::user'
     > &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::politica-de-privacidade.politica-de-privacidade',
+      'oneToMany',
+      'api::politica-de-privacidade.politica-de-privacidade'
+    >;
+    locale: Attribute.String;
   };
 }
 
@@ -1246,6 +1413,11 @@ export interface ApiPostPost extends Schema.CollectionType {
   };
   options: {
     draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
   };
   attributes: {
     title: Attribute.String & Attribute.Required;
@@ -1273,6 +1445,12 @@ export interface ApiPostPost extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<'api::post.post', 'oneToOne', 'admin::user'> &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::post.post',
+      'oneToMany',
+      'api::post.post'
+    >;
+    locale: Attribute.String;
   };
 }
 
@@ -1286,6 +1464,11 @@ export interface ApiPostCategoryPostCategory extends Schema.CollectionType {
   };
   options: {
     draftAndPublish: false;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
   };
   attributes: {
     name: Attribute.String & Attribute.Required;
@@ -1309,6 +1492,12 @@ export interface ApiPostCategoryPostCategory extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::post-category.post-category',
+      'oneToMany',
+      'api::post-category.post-category'
+    >;
+    locale: Attribute.String;
   };
 }
 
@@ -1322,6 +1511,11 @@ export interface ApiProcessosIso9001ProcessosIso9001 extends Schema.SingleType {
   };
   options: {
     draftAndPublish: false;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
   };
   attributes: {
     banner: Attribute.Component<'nested.icon-card-title'> & Attribute.Required;
@@ -1346,6 +1540,12 @@ export interface ApiProcessosIso9001ProcessosIso9001 extends Schema.SingleType {
       'admin::user'
     > &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::processos-iso-9001.processos-iso-9001',
+      'oneToMany',
+      'api::processos-iso-9001.processos-iso-9001'
+    >;
+    locale: Attribute.String;
   };
 }
 
@@ -1359,6 +1559,11 @@ export interface ApiProjectProject extends Schema.SingleType {
   };
   options: {
     draftAndPublish: false;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
   };
   attributes: {
     headline: Attribute.Component<'common.title'> & Attribute.Required;
@@ -1376,6 +1581,12 @@ export interface ApiProjectProject extends Schema.SingleType {
       'admin::user'
     > &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::project.project',
+      'oneToMany',
+      'api::project.project'
+    >;
+    locale: Attribute.String;
   };
 }
 
@@ -1390,6 +1601,11 @@ export interface ApiProjectCategoryProjectCategory
   };
   options: {
     draftAndPublish: false;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
   };
   attributes: {
     name: Attribute.String & Attribute.Required;
@@ -1413,6 +1629,12 @@ export interface ApiProjectCategoryProjectCategory
       'admin::user'
     > &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::project-category.project-category',
+      'oneToMany',
+      'api::project-category.project-category'
+    >;
+    locale: Attribute.String;
   };
 }
 
@@ -1426,6 +1648,11 @@ export interface ApiProjetoProjeto extends Schema.CollectionType {
   };
   options: {
     draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
   };
   attributes: {
     title: Attribute.String & Attribute.Required;
@@ -1461,6 +1688,12 @@ export interface ApiProjetoProjeto extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::projeto.projeto',
+      'oneToMany',
+      'api::projeto.projeto'
+    >;
+    locale: Attribute.String;
   };
 }
 
@@ -1474,6 +1707,11 @@ export interface ApiSustainabilitySustainability extends Schema.SingleType {
   };
   options: {
     draftAndPublish: false;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
   };
   attributes: {
     banner: Attribute.Component<'nested.icon-card-short'> & Attribute.Required;
@@ -1498,6 +1736,12 @@ export interface ApiSustainabilitySustainability extends Schema.SingleType {
       'admin::user'
     > &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::sustainability.sustainability',
+      'oneToMany',
+      'api::sustainability.sustainability'
+    >;
+    locale: Attribute.String;
   };
 }
 
@@ -1511,6 +1755,11 @@ export interface ApiTechSupportTechSupport extends Schema.SingleType {
   };
   options: {
     draftAndPublish: false;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
   };
   attributes: {
     banner: Attribute.Component<'products.banner-cta'> & Attribute.Required;
@@ -1535,6 +1784,12 @@ export interface ApiTechSupportTechSupport extends Schema.SingleType {
       'admin::user'
     > &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::tech-support.tech-support',
+      'oneToMany',
+      'api::tech-support.tech-support'
+    >;
+    locale: Attribute.String;
   };
 }
 
